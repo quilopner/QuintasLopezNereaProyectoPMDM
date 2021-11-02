@@ -1,3 +1,3 @@
 # QuintasLopezNereaProyectoPMDM
 
-* Proyecto para el módulo de PMDM sobre gestión de películas *
+* Proyecto para el módulo de PMDM sobre gestión de películas
