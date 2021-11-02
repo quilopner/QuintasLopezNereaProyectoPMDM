@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.QuintasLopezNereaProyectoPMDM" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#7edeea</item>
+        <item name="colorPrimaryVariant">#b2ffff</item>
+        <item name="colorOnPrimary">#48acb8</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#00bcd4</item>
+        <item name="colorSecondaryVariant">#62efff</item>
+        <item name="colorOnSecondary">#008ba3</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
