@@ -1,9 +1,10 @@
-package com.example.quintaslopeznereaproyectopmdm
+package com.example.quintaslopeznereaproyectopmdm.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.quintaslopeznereaproyectopmdm.R
 
 class LoginActivity : AppCompatActivity() {
 

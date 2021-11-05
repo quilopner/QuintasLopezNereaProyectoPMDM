@@ -9,18 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuintasLopezNereaProyectoPMDM">
-
         <activity
-            android:name=".RegistroActivity"
+            android:name=".modelo.entidades.Pelicula"
+            android:exported="true" />
+        <activity
+            android:name=".activities.ListadoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.RegistroActivity"
             android:exported="true">
-
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".LoginActivity" />
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.LoginActivity" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
