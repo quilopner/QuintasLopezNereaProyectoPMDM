@@ -31,7 +31,7 @@
             android:id="@+id/til_nombre"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margen_textfield_registro"
+            android:layout_marginTop="@dimen/margen_vertical_entre_editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_login">
@@ -47,7 +47,7 @@
             android:id="@+id/Email"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margen_textfield_registro"
+            android:layout_marginTop="@dimen/margen_vertical_entre_editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_nombre">
@@ -63,7 +63,7 @@
             android:id="@+id/til_contraseña"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margen_textfield_registro"
+            android:layout_marginTop="@dimen/margen_vertical_entre_editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Email">
@@ -80,7 +80,7 @@
             android:id="@+id/til_username"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margen_textfield_registro"
+            android:layout_marginTop="@dimen/margen_vertical_entre_editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_contraseña">
@@ -89,14 +89,14 @@
                 android:id="@+id/tiNombreUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Nombre de usuario" />
+                android:hint="@string/hint_nombre_usuario" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_dni"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margen_textfield_registro"
+            android:layout_marginTop="@dimen/margen_vertical_entre_editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_username">

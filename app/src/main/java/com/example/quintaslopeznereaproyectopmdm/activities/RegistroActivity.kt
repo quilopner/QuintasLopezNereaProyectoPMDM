@@ -1,6 +1,7 @@
 package com.example.quintaslopeznereaproyectopmdm.activities
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -31,6 +32,10 @@ class RegistroActivity : AppCompatActivity() {
             var sharedPrefs = getPreferences(Context.MODE_PRIVATE)
             var editor = sharedPrefs.edit()
             editor.putString("email", etmail.text.toString())
+
+            //Accedemos directamente a la lista
+            val intent = Intent(this, ListadoActivity::class.java)
+            startActivity(intent)
         }
     }
 

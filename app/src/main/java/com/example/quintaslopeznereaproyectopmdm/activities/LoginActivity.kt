@@ -8,8 +8,8 @@ import com.example.quintaslopeznereaproyectopmdm.R
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var btRegistro : Button
-    private lateinit var btInicio : Button
+    private lateinit var btRegistro: Button
+    private lateinit var btInicio: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,12 +19,13 @@ class LoginActivity : AppCompatActivity() {
         btInicio = findViewById(R.id.btnInicio)
 
 
-        btRegistro.setOnClickListener{
+        btRegistro.setOnClickListener {
             val intent = Intent(this, RegistroActivity::class.java)
             startActivity(intent)
         }
-        btInicio.setOnClickListener{
-
+        btInicio.setOnClickListener {
+            val intent = Intent(this, ListadoActivity::class.java)
+            startActivity(intent)
         }
 
     }

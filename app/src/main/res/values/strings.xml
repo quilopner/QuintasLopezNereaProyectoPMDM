@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">QuintasLopezNereaProyectoPMDM</string>
+
+    <!-- Acciones -->
+
+    <!-- Hints -->
+    <string name="hint_nombre_usuario">Nombre de usuario</string>
+
 </resources>

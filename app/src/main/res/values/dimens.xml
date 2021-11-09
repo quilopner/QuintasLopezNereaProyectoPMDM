@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margen_textfield_registro">36dp</dimen>
+    <!-- Pantalla principal -->
+    <dimen name="padding_pantalla_default_horizontal">16dp</dimen>
+    <dimen name="padding_pantalla_default_vertical">16dp</dimen>
+
+    <!-- Elementos -->
+    <dimen name="margen_vertical_entre_editText">32dp</dimen>
+
+    <!--Imágenes -->
+    <dimen name="imagen_lista_default_size">64dp</dimen>
+
 </resources>

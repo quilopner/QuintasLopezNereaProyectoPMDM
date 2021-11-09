@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuintasLopezNereaProyectoPMDM">
         <activity
+            android:name=".modelo.dao.PeliculasDaoMockImpl"
+            android:exported="true" />
+        <activity
+            android:name=".adapters.ListaPeliculasAdapter"
+            android:exported="true" />
+        <activity
             android:name=".modelo.entidades.Pelicula"
             android:exported="true" />
         <activity
