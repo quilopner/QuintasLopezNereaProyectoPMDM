@@ -14,6 +14,8 @@ class ListaPeliculasAdapter(val peliculas: List<Pelicula>) :
     RecyclerView.Adapter<ListaPeliculasAdapter.PeliculasViewHolder>() {
     class PeliculasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvTitulo = itemView.findViewById<TextView>(R.id.tvTitulo)
+        val tvGenero = itemView.findViewById<TextView>(R.id.tvGenero)
+        val tvDirector = itemView.findViewById<TextView>(R.id.tvDirector)
         val tvNota = itemView.findViewById<TextView>(R.id.tvNota)
         val ivFoto = itemView.findViewById<ImageView>(R.id.ivPortada)
     }
@@ -27,8 +29,10 @@ class ListaPeliculasAdapter(val peliculas: List<Pelicula>) :
     override fun onBindViewHolder(holder: PeliculasViewHolder, position: Int) {
         val pelicula = peliculas.get(position)
 
-        holder.tvNota.setText(pelicula.nota.toString())
         holder.tvTitulo.setText(pelicula.titulo)
+        holder.tvGenero.setText(pelicula.genero)
+        holder.tvDirector.setText(pelicula.director)
+        holder.tvNota.setText(pelicula.nota.toString())
         Picasso.get().load(pelicula.url).into(holder.ivFoto);
     }
 

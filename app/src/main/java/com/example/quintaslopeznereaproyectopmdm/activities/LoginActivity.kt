@@ -18,11 +18,13 @@ class LoginActivity : AppCompatActivity() {
         btRegistro = findViewById(R.id.btnRegistro)
         btInicio = findViewById(R.id.btnInicio)
 
-
+        // Abrimos la activity de Registro
         btRegistro.setOnClickListener {
             val intent = Intent(this, RegistroActivity::class.java)
             startActivity(intent)
         }
+
+        // Abrimos la activity con el listado de películas
         btInicio.setOnClickListener {
             val intent = Intent(this, ListadoActivity::class.java)
             startActivity(intent)

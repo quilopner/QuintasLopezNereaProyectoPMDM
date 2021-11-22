@@ -72,7 +72,8 @@
                 android:id="@+id/ticontraseña"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Contraseña" />
+                android:hint="Contraseña"
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

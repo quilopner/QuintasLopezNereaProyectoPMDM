@@ -8,7 +8,6 @@ class Pelicula (
     var titulo: String,
     var genero: String,
     var director: String,
-    var nota: Double
-) {
-    var url = ""
-}
+    var nota: Double,
+    var url: String
+) 

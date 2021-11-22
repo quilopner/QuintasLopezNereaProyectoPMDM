@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.service.autofill.OnClickAction
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
@@ -33,9 +34,10 @@ class RegistroActivity : AppCompatActivity() {
             var editor = sharedPrefs.edit()
             editor.putString("email", etmail.text.toString())
 
-            //Accedemos directamente a la lista
-            val intent = Intent(this, ListadoActivity::class.java)
+            //Al pulsar en el botón "Regístrame" retroceder a la pantalla de login
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
