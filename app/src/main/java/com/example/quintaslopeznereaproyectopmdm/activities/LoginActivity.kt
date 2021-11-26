@@ -15,6 +15,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        setTitle("Inicio de sesión")
+
         btRegistro = findViewById(R.id.btnRegistro)
         btInicio = findViewById(R.id.btnInicio)
 

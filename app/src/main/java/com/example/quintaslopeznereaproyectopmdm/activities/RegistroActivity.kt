@@ -24,6 +24,8 @@ class RegistroActivity : AppCompatActivity() {
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setTitle("Regístrate con nosotros")
+
         btRegistrame = findViewById(R.id.btnRegistrame)
 
         val btRegistrame = findViewById<TextView>(R.id.btnRegistrame)

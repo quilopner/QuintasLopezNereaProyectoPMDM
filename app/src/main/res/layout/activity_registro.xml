@@ -17,13 +17,12 @@
             android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="116dp"
             android:fontFamily="@font/letra_login"
             android:text="REGISTRO"
             android:textColor="#000000"
-            android:textSize="50dp"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +30,7 @@
             android:id="@+id/til_nombre"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margen_vertical_entre_editText"
+            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_login">
@@ -39,7 +38,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Nombre y Apellidos"/>
+                android:hint="Nombre y Apellidos" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,12 +112,24 @@
             android:id="@+id/btnRegistrame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="32dp"
             android:text="Regístrame"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_dni" />
+
+        <ImageView
+            android:id="@+id/ivRegistro"
+            android:layout_width="202dp"
+            android:layout_height="111dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/nerd_film"
+            tools:srcCompat="@tools:sample/avatars" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

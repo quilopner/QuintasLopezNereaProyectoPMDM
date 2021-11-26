@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quintaslopeznereaproyectopmdm">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuintasLopezNereaProyectoPMDM">
+        <!--
+
+        Esto se generó automáticamente, me di cuenta cuando añadí los permisos de internet y por si
+        no hacía falta borrarlo lo dejo así.
+
         <activity
             android:name=".modelo.dao.PeliculasDaoMockImpl"
             android:exported="true" />
@@ -18,6 +24,7 @@
         <activity
             android:name=".modelo.entidades.Pelicula"
             android:exported="true" />
+            -->
         <activity
             android:name=".activities.ListadoActivity"
             android:exported="true" />

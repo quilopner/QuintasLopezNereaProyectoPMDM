@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quintaslopeznereaproyectopmdm.R
 import com.example.quintaslopeznereaproyectopmdm.modelo.entidades.Pelicula
@@ -14,10 +15,11 @@ class ListaPeliculasAdapter(val peliculas: List<Pelicula>) :
     RecyclerView.Adapter<ListaPeliculasAdapter.PeliculasViewHolder>() {
     class PeliculasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvTitulo = itemView.findViewById<TextView>(R.id.tvTitulo)
-        val tvGenero = itemView.findViewById<TextView>(R.id.tvGenero)
+        /* val tvGenero = itemView.findViewById<TextView>(R.id.tvGenero)
         val tvDirector = itemView.findViewById<TextView>(R.id.tvDirector)
-        val tvNota = itemView.findViewById<TextView>(R.id.tvNota)
+        val tvNota = itemView.findViewById<TextView>(R.id.tvNota) */
         val ivFoto = itemView.findViewById<ImageView>(R.id.ivPortada)
+        val idPelicula = itemView.findViewById<ConstraintLayout>(R.id.pelicula)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PeliculasViewHolder {
@@ -30,10 +32,12 @@ class ListaPeliculasAdapter(val peliculas: List<Pelicula>) :
         val pelicula = peliculas.get(position)
 
         holder.tvTitulo.setText(pelicula.titulo)
-        holder.tvGenero.setText(pelicula.genero)
+        /* holder.tvGenero.setText(pelicula.genero)
         holder.tvDirector.setText(pelicula.director)
-        holder.tvNota.setText(pelicula.nota.toString())
-        Picasso.get().load(pelicula.url).into(holder.ivFoto);
+        holder.tvNota.setText(pelicula.nota.toString())*/
+        Picasso.get().load(pelicula.url).into(holder.ivFoto)
+
+        holder.idPelicula.setOnClickListener()
     }
 
     override fun getItemCount(): Int {

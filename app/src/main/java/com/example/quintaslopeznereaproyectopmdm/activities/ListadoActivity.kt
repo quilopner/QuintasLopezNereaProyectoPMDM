@@ -2,6 +2,7 @@ package com.example.quintaslopeznereaproyectopmdm.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quintaslopeznereaproyectopmdm.R
@@ -18,6 +19,9 @@ class ListadoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setTitle("Lista de películas")
+
+
         //Inflo las vistas
         binding = ActivityListadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -27,7 +31,7 @@ class ListadoActivity : AppCompatActivity() {
         val listaPeliculas = peliculasDao.getTodos()
 
         //Creo el RecyclerView con todos sus componentes
-        val layoutManager = LinearLayoutManager(this)
+        val layoutManager = GridLayoutManager(this,2)
         val adapter = ListaPeliculasAdapter(listaPeliculas)
 
         //Asocio el RecuclerView con sus componentes
