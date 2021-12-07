@@ -56,6 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_login">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietUsuario"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Nombre de usuario" />
@@ -73,6 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tiusuario">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietContrasenha"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Introduzca Contraseña" />

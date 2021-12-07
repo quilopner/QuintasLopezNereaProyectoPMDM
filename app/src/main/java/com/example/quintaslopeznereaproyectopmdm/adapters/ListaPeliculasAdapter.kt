@@ -37,7 +37,7 @@ class ListaPeliculasAdapter(val peliculas: List<Pelicula>) :
         holder.tvNota.setText(pelicula.nota.toString())*/
         Picasso.get().load(pelicula.url).into(holder.ivFoto)
 
-        holder.idPelicula.setOnClickListener()
+        //holder.idPelicula.setOnClickListener()
     }
 
     override fun getItemCount(): Int {
