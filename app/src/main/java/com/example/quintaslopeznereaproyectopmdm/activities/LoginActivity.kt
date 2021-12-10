@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import com.example.quintaslopeznereaproyectopmdm.R
 import com.example.quintaslopeznereaproyectopmdm.databinding.ActivityLoginBinding
 import com.example.quintaslopeznereaproyectopmdm.modelo.dao.PreferenciasApp
@@ -37,7 +38,23 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnInicio.setOnClickListener {
+            if (binding.tietUsuario.text.toString().length==0 || binding.tietContrasenha.text.toString().length==0 ){
 
+                val adb = AlertDialog.Builder(this)
+                adb.setIcon(R.drawable.outline_error_24)
+                adb.setTitle("Datos incorrectos")
+                adb.setMessage("El usuario y/o la contraseña están vacíos.")
+                adb.setPositiveButton("Aceptar") { dialog, which ->}
+                adb.show()
+            }
+            else if (!user.equals(binding.tietUsuario.text.toString())) {
+                binding.tietUsuario.setError("El usuario no existe")
+            } else if (!passwd.equals(binding.tietContrasenha.text.toString())) {
+                binding.tietContrasenha.setError("La contraseña no es correcta")
+            } else {
+                val intent = Intent(this, PeliculasActivity::class.java)
+                startActivity(intent)
+            }
         }
 
     }
