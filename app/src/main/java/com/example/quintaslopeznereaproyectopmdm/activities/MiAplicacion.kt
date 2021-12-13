@@ -1,4 +1,4 @@
-package com.example.quintaslopeznereaproyectopmdm
+package com.example.quintaslopeznereaproyectopmdm.activities
 
 import android.app.Application
 

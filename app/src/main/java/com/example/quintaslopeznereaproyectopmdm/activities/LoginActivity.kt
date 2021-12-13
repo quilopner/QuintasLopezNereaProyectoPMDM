@@ -26,8 +26,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val user = pref.recuperarDatos("usuario")
-        val passwd = pref.recuperarDatos("contrasenha")
+        val user = pref.recuperarDatos(PreferenciasApp.ETIQUETA_USUARIO)
+        val passwd = pref.recuperarDatos(PreferenciasApp.ETIQUETA_CONTRASENHA)
 
         binding.tietUsuario.setText(user)
         binding.tietContrasenha.setText(passwd)
@@ -41,7 +41,6 @@ class LoginActivity : AppCompatActivity() {
             if (binding.tietUsuario.text.toString().length==0 || binding.tietContrasenha.text.toString().length==0 ){
 
                 val adb = AlertDialog.Builder(this)
-                adb.setIcon(R.drawable.outline_error_24)
                 adb.setTitle("Datos incorrectos")
                 adb.setMessage("El usuario y/o la contraseña están vacíos.")
                 adb.setPositiveButton("Aceptar") { dialog, which ->}
@@ -52,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
             } else if (!passwd.equals(binding.tietContrasenha.text.toString())) {
                 binding.tietContrasenha.setError("La contraseña no es correcta")
             } else {
-                val intent = Intent(this, PeliculasActivity::class.java)
+                val intent = Intent(this, ListadoActivity::class.java)
                 startActivity(intent)
             }
         }

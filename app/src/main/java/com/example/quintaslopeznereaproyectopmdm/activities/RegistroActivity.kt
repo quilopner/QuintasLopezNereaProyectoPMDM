@@ -12,34 +12,36 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.quintaslopeznereaproyectopmdm.R
 import com.example.quintaslopeznereaproyectopmdm.databinding.ActivityRegistroBinding
+import com.example.quintaslopeznereaproyectopmdm.modelo.dao.PreferenciasApp
 import java.util.regex.Pattern
 
 class RegistroActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegistroBinding
-    private lateinit var btRegistrame: Button
+    private lateinit var pref: PreferenciasApp
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_registro)
+
+        pref = PreferenciasApp(applicationContext)
+
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setTitle("Regístrate con nosotros")
 
-        btRegistrame = findViewById(R.id.btnRegistrame)
-
-        val btRegistrame = findViewById<TextView>(R.id.btnRegistrame)
-        val etmail = findViewById<EditText>(R.id.tiemail)
-
-        btRegistrame.setOnClickListener {
-            var sharedPrefs = getPreferences(Context.MODE_PRIVATE)
-            var editor = sharedPrefs.edit()
-            editor.putString("email", etmail.text.toString())
-
-            //Al pulsar en el botón "Regístrame" retroceder a la pantalla de login
+        binding.btnRegistrame.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+            comprobarDatos()
+
+            if (comprobarDatos() == true){
+                val user = binding.tiNombreUsuario.text.toString().trim()
+                val passwd = binding.tipassword.text.toString().trim()
+
+                pref.guardar(user, passwd)
+                startActivity(intent)
+            }
         }
     }
 
@@ -51,7 +53,7 @@ class RegistroActivity : AppCompatActivity() {
 
     //Comprueba el mail y la contraseña
     private fun comprobarDatos(): Boolean {
-        val contraseña = binding.ticontraseA.text.toString()
+        val contraseña = binding.tipassword.text.toString()
 
         //Condición para un correo inválido
         if (validarEmail(binding.tiemail.text.toString()) == false) {
