@@ -4,45 +4,69 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.graphics.drawable.DrawableCompat
 import com.example.quintaslopeznereaproyectopmdm.R
 import com.example.quintaslopeznereaproyectopmdm.databinding.ActivityDetalleBinding
 import com.example.quintaslopeznereaproyectopmdm.databinding.ActivityLoginBinding
+import com.example.quintaslopeznereaproyectopmdm.modelo.dao.PeliculasDao
+import com.example.quintaslopeznereaproyectopmdm.modelo.dao.PeliculasDaoMockImpl
 import com.example.quintaslopeznereaproyectopmdm.modelo.entidades.Pelicula
 import com.squareup.picasso.Picasso
 
 class DetalleActivity : AppCompatActivity() {
 
-    private lateinit var pelicula: Pelicula
+
+    companion object {
+        const val BUNDLE_DATA_PELICULA = "pelicula"
+    }
 
     private lateinit var binding: ActivityDetalleBinding
+    private lateinit var peliculasDao: PeliculasDao
+
+    private var pelicula: Pelicula? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detalle)
 
+        setTitle("Detalles de la película")
+
+        super.onCreate(savedInstanceState)
         binding = ActivityDetalleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        pelicula = intent.extras?.get("pelicula") as Pelicula
+        peliculasDao = PeliculasDaoMockImpl()
+        pelicula = intent.getSerializableExtra(BUNDLE_DATA_PELICULA) as Pelicula?
 
-        Picasso.get().load(pelicula.url).into(binding.idLogoDetalle)
-        binding.tietDirectorDetalle.text = pelicula.director
-        binding.tietGeneroDetalle.text = pelicula.genero
-        binding.tietTituloDetalle.text = pelicula.titulo
-        binding.tietNota.text = pelicula.nota.toDouble()
 
-        if (pelicula.nota.toDouble() < 5) {
-            val progress: Drawable = binding.tietNota.getProgressDrawable()
-            DrawableCompat.setTint(progress, Color.RED)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_listado, menu)
+        return true
+    }
+
+    //Menu para borrar y editar
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+
+            R.id.basura -> {
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Eliminar personaje").setMessage("Confirma eliminación.")
+                    .setPositiveButton("Aceptar") { _, _ ->
+                        Toast.makeText(this, "Personaje Animado", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }.setNegativeButton("Cancelar", null).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
 
-
-
-        setTitle("Detalle Películas")
     }
 }
 
-private fun TextInputEditText.getProgressDrawable(): Drawable {
 
-}
+
+
