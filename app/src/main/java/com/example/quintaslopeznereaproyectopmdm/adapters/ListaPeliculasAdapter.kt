@@ -1,5 +1,6 @@
 package com.example.quintaslopeznereaproyectopmdm.adapters
 
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -15,8 +16,9 @@ import com.example.quintaslopeznereaproyectopmdm.activities.RegistroActivity
 import com.example.quintaslopeznereaproyectopmdm.modelo.entidades.Pelicula
 import com.squareup.picasso.Picasso
 
-class ListaPeliculasAdapter(val peliculas: List<Pelicula>) :
+class ListaPeliculasAdapter(val peliculas: List<Pelicula>,val context: Context) :
     RecyclerView.Adapter<ListaPeliculasAdapter.PeliculasViewHolder>() {
+
     class PeliculasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvTitulo = itemView.findViewById<TextView>(R.id.tvTitulo)
         /* val tvGenero = itemView.findViewById<TextView>(R.id.tvGenero)

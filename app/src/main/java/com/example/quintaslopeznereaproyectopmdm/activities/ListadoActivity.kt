@@ -26,7 +26,6 @@ class ListadoActivity : AppCompatActivity() {
 
         setTitle("Lista de películas")
 
-
         //Inflo las vistas
         binding = ActivityListadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -37,7 +36,7 @@ class ListadoActivity : AppCompatActivity() {
 
         //Creo el RecyclerView con todos sus componentes
         val layoutManager = GridLayoutManager(this, 2)
-        val adapter = ListaPeliculasAdapter(listaPeliculas)
+        val adapter = ListaPeliculasAdapter(listaPeliculas,this)
 
         //Asocio el RecuclerView con sus componentes
         binding.rvPeliculasList.adapter = adapter
@@ -49,14 +48,12 @@ class ListadoActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-
-
     }
-
-
-
-
-
+    override fun onResume() {
+        super.onResume()
+        val adapter = ListaPeliculasAdapter(MiAplicacion.apelicula,this)
+        binding.rvPeliculasList.adapter = adapter
+    }
 
 }
 

@@ -9,6 +9,7 @@
         app:showAsAction="always"
         android:icon="@drawable/basura"
         android:title="Eliminar elemento">
+
     </item>
 
     <item
@@ -19,6 +20,14 @@
         android:title="Editar elemento"
         >
 
+    </item>
+
+    <item
+        android:id="@+id/guardar"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/guardar"
+        android:title="Guardar elemento">
     </item>
 
 </menu>

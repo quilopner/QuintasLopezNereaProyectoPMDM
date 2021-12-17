@@ -4,8 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import java.io.Serializable
 
-class Pelicula(
-    var id: Long,
+data class Pelicula(
     var titulo: String,
     var genero: String,
     var director: String,

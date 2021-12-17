@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".activities.MiAplicacion"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,21 +14,8 @@
         android:theme="@style/Theme.QuintasLopezNereaProyectoPMDM">
         <activity
             android:name=".activities.DetalleActivity"
-            android:exported="true" />
-        <!--
-        Esto se generó automáticamente, me di cuenta cuando añadí los permisos de internet y por si
-        no hacía falta borrarlo lo dejo así.
-
-        <activity
-            android:name=".modelo.dao.PeliculasDaoMockImpl"
-            android:exported="true" />
-        <activity
-            android:name=".adapters.ListaPeliculasAdapter"
-            android:exported="true" />
-        <activity
-            android:name=".modelo.entidades.Pelicula"
-            android:exported="true" />
-        -->
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.ListadoActivity"
             android:exported="true" />
