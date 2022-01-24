@@ -4,16 +4,16 @@ En este proyecto se hace un CRUD (creación, lectura, actualización, eliminaci�
 
 ### Imagen del inicio de la aplicación
 
-![Imágenes de la aplicación](../app/src/main/assets/images/inicio.png)
+![Imágenes de la aplicación](images/inicio.png)
 
 ### Imagen del registro de la aplicación
 
-![Imagen de registro](../app/src/main/assets/images/Registro.png)
+![Imagen de registro](images/Registro.png)
 
 ### Imagen del listado de la aplicación
 
-![Imagen de listado](../app/src/main/assets/images/Listado.png)
+![Imagen de listado](images/Listado.png)
 
 ### Imagen de los detalles de la aplicación
 
-![Imagen de los detalles](../app/src/main/assets/images/detalles.png)
+![Imagen de los detalles](images/detalles.png)
