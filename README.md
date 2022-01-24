@@ -29,4 +29,5 @@ En este proyecto se hace un CRUD (creación, lectura, actualización, eliminaci�
 ### Cosas pendientes de solucionar
 - [ ] Funciones de edición, guardado y borrado
 - [ ] Que se oculte el teclado automaticamente cuando abres Registro
+- [x] #730
 - [x] Modificar el README
