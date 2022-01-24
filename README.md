@@ -17,3 +17,16 @@ En este proyecto se hace un CRUD (creación, lectura, actualización, eliminaci�
 ### Imagen de los detalles de la aplicación
 
 ![Imagen de los detalles](images/detalles.png)
+
+#### Listado de películas que se muestran actualmente en la app
+- La máscara
+- Insidious
+- It
+- Sinister
+- La fiesta de las salchichas
+- Los Simpsons
+
+### Cosas pendientes de solucionar
+- [ ] Funciones de edición, guardado y borrado
+- [ ] Que se oculte el teclado automaticamente cuando abres Registro
+- [x] Modificar el README
