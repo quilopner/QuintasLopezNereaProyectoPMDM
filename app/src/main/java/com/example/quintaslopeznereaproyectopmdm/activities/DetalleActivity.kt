@@ -114,10 +114,11 @@ class DetalleActivity : AppCompatActivity() {
             R.id.guardar -> {
                 //Guardar campos
                 val peliculaCreada = Pelicula(
-                    binding.tiTituloDetalle.text.toString(),
+                    binding.tietTituloDetalle.text.toString(),
                     binding.tietGeneroDetalle.text.toString(),
                     binding.tietDirectorDetalle.text.toString(),
-                    binding.tietNota.text.()
+                    binding.tietNota.text.toString(),
+                    binding.tvURL.text.toString()
                 )
                 if (intent.extras?.get("pelicula") == null) {
                     apelicula.add(peliculaCreada)

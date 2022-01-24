@@ -8,6 +8,6 @@ data class Pelicula(
     var titulo: String,
     var genero: String,
     var director: String,
-    var nota: Double,
+    var nota: String,
     var url: String
 ) : Serializable
