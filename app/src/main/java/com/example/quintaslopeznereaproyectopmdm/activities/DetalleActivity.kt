@@ -118,7 +118,7 @@ class DetalleActivity : AppCompatActivity() {
                     binding.tietGeneroDetalle.text.toString(),
                     binding.tietDirectorDetalle.text.toString(),
                     binding.tietNota.text.toString(),
-                    binding.tvURL.text.toString()
+                    binding.ivCaratula.toString()
                 )
                 if (intent.extras?.get("pelicula") == null) {
                     apelicula.add(peliculaCreada)

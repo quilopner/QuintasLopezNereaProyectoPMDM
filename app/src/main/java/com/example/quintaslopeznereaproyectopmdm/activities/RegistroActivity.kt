@@ -32,7 +32,7 @@ class RegistroActivity : AppCompatActivity() {
         setTitle("Regístrate con nosotros")
 
         binding.btnRegistrame.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            /* val intent = Intent(this, LoginActivity::class.java)
             comprobarDatos()
 
             if (comprobarDatos() == true){
@@ -42,6 +42,11 @@ class RegistroActivity : AppCompatActivity() {
                 pref.guardar(user, passwd)
                 startActivity(intent)
             }
+
+             */
+
+
+
         }
     }
 
